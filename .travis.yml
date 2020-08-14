@@ -8,9 +8,6 @@ services:
 
 before_script: pip install docker-compose
 
-script:
-    - docker-compose run app sh -c "pytest test.py -p no:cacheprovider"
-
 deploy:
     provider: script
     script: bash ci/deploy.sh
