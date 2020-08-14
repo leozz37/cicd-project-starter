@@ -18,8 +18,6 @@ For the sake of this tutorial, Python is the language of choice to make things e
 
 ## Source Tree
 
-Let me explain what every file does:
-
 ```
 image
 |__cover.jpeg
