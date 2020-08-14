@@ -13,6 +13,6 @@ script:
 
 deploy:
     provider: script
-    script: bash ci/deploy.sh
+    script: bash scripts/deploy.sh
     on:
         branch: master
