@@ -62,7 +62,7 @@ src
 
 ## Containerization
 
-[Dockerfile](Dockerfile) and [docker-compose.yml](Docker-compose.yml) are responsible for the build, so make sure to master these tools. You need [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) installed.
+[Dockerfile](Dockerfile) and [docker-compose.yml](Docker-compose.yml) are responsible for the build. You need [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) installed.
 
 To build the the Dockerfile, use the following command:
 
