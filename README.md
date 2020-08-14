@@ -25,8 +25,7 @@ image
 |__cover.jpeg
 ```
 
-- [cover.jpg](./image/cover.jpeg) has no pratical use, only aesthetics.
-
+- [image](./image) directory has no pratical use, only for reference and aesthetics.
 
  ```
 scripts
@@ -65,7 +64,7 @@ src
 
 ## Containerization
 
-[Dockerfile](Dockerfile) and [docker-compose.yml](Docker-compose.yml) are the responsible for the build, so make sure to master these tools. You need [Docker]() and [Docker Compose]() installed.
+[Dockerfile](Dockerfile) and [docker-compose.yml](Docker-compose.yml) are the responsible for the build, so make sure to master these tools. You need [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) installed.
 
 To build the the Dockerfile, use the following command:
 
@@ -79,11 +78,11 @@ Running:
 $ docker run -p 80:8000 cool-image-name
 ```
 
-You can use [DockerHub]() as your image repository, just change on the image on docker-compose file for your user and image name, following by the tag like this: 
+You can use [Docker Hub](https://hub.docker.com/) as your image repository, just change on the image on docker-compose file for your user and image name, following by the tag like this: 
 
 `leozz37/cicd-example:latest`
 
-To push an image to DockerHub, follow these commands:
+To push an image to Docker Hub, follow these commands:
 
 ```
 $ docker build -t leozz37/cicd-example .
@@ -117,6 +116,10 @@ On our [travis.yml](.travis.yml), we're only using the _deploy_ and _before\_ins
 
 I recommend you use them to install dependencies, run tests, generate alerts, etc.
 
+Travis lets you setup environment variable on the settings tab of the project. For deploy, should looks like this:
+
+![cover](./image/travis-tokens.png)
+
 ## Deployment
 
 Amazon Web Services (AWS) is our tool of choice. They have so many tools and services to offer, we don't have a general sample to use. But since we're using Docker to deploy our system, we'll be using ECS to deploy ou application to the world.
@@ -125,19 +128,19 @@ I highlity recommend that you [READ THE DOCS](https://docs.aws.amazon.com/ecs/in
 For the ECS setup, [create-ecs.sh](./scripts/create-ecs.sh) offers an example for the commands used to create the sample for this project. It has some env variables, that you can swap for your credentials and configs.
 It shows two ways of hosting the image, through DockerHub and ECR, pick what fits you better.
 
-There's basically three ways of setting [deploy.sh](./scripts/deploy.sh) up. The first is through Docker Hub, so you can remove ECR's code. The second is through ECR, then you can remove Docker Hub code. The third (and probally better one) is setting up [AWS Blue-Green Deployment](https://aws.amazon.com/quickstart/architecture/blue-green-deployment/) and use [ecs-deploy]() lib for deploying.
+There's basically three ways of setting [deploy.sh](./scripts/deploy.sh) up. The first is through Docker Hub, so you can remove ECR's code. The second is through ECR, then you can remove Docker Hub code. The third (and probally better one) is setting up [AWS Blue-Green Deployment](https://aws.amazon.com/quickstart/architecture/blue-green-deployment/) and use [ecs-deploy](https://github.com/silinternational/ecs-deploy) lib for deploying.
 
 ## Alternative Tools
 
 We'll be using (kinda) free tools for this example, but feel free to use and explore other tools! Here's some recomendations:
 
-Instead of Github, you can use [Gitlab](https://aws.amazon.com/pt/) or [Bitbucket](https://aws.amazon.com/pt/).
+Instead of Github, you can use [Gitlab](https://about.gitlab.com/) or [Bitbucket](https://bitbucket.org/).
 
-For Docker, you can't go much father then [Kubernetes](https://aws.amazon.com/pt/).
+For Docker, you can't go much father then [Kubernetes](https://kubernetes.io).
 
-Travis has a lot of competitors, such as [appveyor](), [Jenkins](), [CodePipeline](), [CircleCI](), [Gitlab CI Tool]() and many more...
+Travis has a lot of competitors, such as [appveyor](https://kubernetes.io), [Jenkins](https://www.jenkins.io/), [CodePipeline](https://aws.amazon.com/codepipeline/), [CircleCI](https://circleci.com/), [Gitlab CI Tool](https://docs.gitlab.com/ee/ci/pipelines/) and many more...
 
-For AWS it dependes on your system. If your hosting a static web page, you can use [Github Pages](), if it's a more complex system there's [Google Cloud](), [Azure](), [Heroku]() and many many more.
+For AWS it dependes on your system. If your hosting a static web page, you can use [Github Pages](https://pages.github.com/), if it's a more complex system there's [Google Cloud](https://cloud.google.com/), [Azure](https://azure.microsoft.com/), [Heroku](https://www.heroku.com/) and many many more.
 
 Check my [book and tools recommendations for software engineering](https://github.com/leozz37/books), for more CI/CD tools.
 
