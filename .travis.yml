@@ -1,0 +1,12 @@
+sudo: true
+
+services:
+    - docker
+
+before_script: pip install docker-compose
+
+deploy:
+    provider: script
+    script: bash ci/deploy.sh
+    on:
+        branch: master
