@@ -1,7 +1,0 @@
-version: 1
-
-task_definition:
-    task_execution_role: ecsTaskExecutionRole
-    services:
-        app:
-            mem_reservation: 512
