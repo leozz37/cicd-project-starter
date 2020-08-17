@@ -6,6 +6,8 @@
 
 This template is aimed to help you set up a CI/CD development environment on the cloud!
 
+Check my [article](https://medium.com/@leonardoaugusto287/creating-a-ci-cd-environment-and-deploying-containers-in-the-cloud-e97811a4888a) about CI/CD!
+
 We will be using the following tools for, but feel free to adapt to your project needs:
 
 -   [Github](https://guides.github.com/activities/hello-world/)
