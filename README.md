@@ -64,7 +64,7 @@ src
 
 [Dockerfile](Dockerfile) and [docker-compose.yml](Docker-compose.yml) are responsible for the build. You need [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/) installed.
 
-To build the the Dockerfile, use the following command:
+To build the Dockerfile, use the following command:
 
 ```
 $ docker build -t cool-image-name . 
@@ -105,7 +105,7 @@ On our [travis.yml](.travis.yml), we're only using the _deploy_ and _before\_ins
 -   install:
 -   before_install:
 -   script:
--   after_succes:
+-   after_success:
 -   after_failure:
 -   after_script:
 -   before_deploy:
